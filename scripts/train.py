@@ -6,6 +6,7 @@ import sys
 from datetime import timedelta
 from pathlib import Path
 from typing import Optional, TextIO
+import re
 
 import torch
 import torch.distributed as dist
@@ -106,14 +107,26 @@ def main(cfg: TrainConfig) -> None:
     if cfg.wandb is not None and (get_global_rank() == 0 or not cfg.wandb.rank_zero_only):
         wandb_dir = Path(cfg.save_folder) / "wandb"
         wandb_dir.mkdir(parents=True, exist_ok=True)
+
+        # Custom wandb run names
+        match = re.search(r'step(\d+)-', cfg.load_path)
+
+        # Extract the number as an integer if it exists
+        if match:
+            step_number = int(match.group(1))
+        else:
+            step_number = 0
+
+        dynamic_name = cfg.wandb.name + f"-{int((step_number // 1000)*4.2)}B_pt"
         wandb.init(
             dir=wandb_dir,
             project=cfg.wandb.project,
             entity=cfg.wandb.entity,
             group=cfg.wandb.group,
-            name=cfg.wandb.name,
+            name=dynamic_name,
             tags=cfg.wandb.tags,
             config=cfg.asdict(exclude=["wandb"]),
+            settings=wandb.Settings(_service_wait=60)  # Increase timeout to 60 seconds
         )
 
     barrier()

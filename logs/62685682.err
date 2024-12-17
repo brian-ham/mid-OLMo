@@ -1,0 +1,203 @@
+[W socket.cpp:464] [c10d] The server socket cannot be initialized on [::]:29500 (errno: 97 - Address family not supported by protocol).
+[W socket.cpp:464] [c10d] The server socket cannot be initialized on [::]:29500 (errno: 97 - Address family not supported by protocol).
+[W socket.cpp:464] [c10d] The server socket cannot be initialized on [::]:29500 (errno: 97 - Address family not supported by protocol).
+[W socket.cpp:464] [c10d] The server socket cannot be initialized on [::]:29500 (errno: 97 - Address family not supported by protocol).
+[W socket.cpp:464] [c10d] The server socket has failed to bind to 0.0.0.0:29500 (errno: 98 - Address already in use).
+[E socket.cpp:500] [c10d] The server socket has failed to listen on any local network address.
+[W socket.cpp:464] [c10d] The server socket has failed to bind to 0.0.0.0:29500 (errno: 98 - Address already in use).
+[E socket.cpp:500] [c10d] The server socket has failed to listen on any local network address.
+[W socket.cpp:464] [c10d] The server socket has failed to bind to 0.0.0.0:29500 (errno: 98 - Address already in use).
+[E socket.cpp:500] [c10d] The server socket has failed to listen on any local network address.
+[W socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [localhost]:29500 (errno: 97 - Address family not supported by protocol).
+Traceback (most recent call last):
+  File "/n/home07/bham/.local/bin/torchrun", line 8, in <module>
+Traceback (most recent call last):
+  File "/n/home07/bham/.local/bin/torchrun", line 8, in <module>
+Traceback (most recent call last):
+  File "/n/home07/bham/.local/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 347, in wrapper
+    sys.exit(main())
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 347, in wrapper
+    sys.exit(main())
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 347, in wrapper
+    return f(*args, **kwargs)
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/run.py", line 879, in main
+    return f(*args, **kwargs)
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/run.py", line 879, in main
+    return f(*args, **kwargs)
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/run.py", line 879, in main
+    run(args)
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/run.py", line 870, in run
+    run(args)
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/run.py", line 870, in run
+    run(args)
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/run.py", line 870, in run
+    elastic_launch(
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
+    elastic_launch(
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
+    elastic_launch(
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 254, in launch_agent
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 254, in launch_agent
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 254, in launch_agent
+    result = agent.run()
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 123, in wrapper
+    result = agent.run()
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 123, in wrapper
+    result = agent.run()
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 123, in wrapper
+    result = f(*args, **kwargs)
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 733, in run
+    result = f(*args, **kwargs)
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 733, in run
+    result = f(*args, **kwargs)
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 733, in run
+    result = self._invoke_run(role)
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 870, in _invoke_run
+    result = self._invoke_run(role)
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 870, in _invoke_run
+    result = self._invoke_run(role)
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 870, in _invoke_run
+    self._initialize_workers(self._worker_group)
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 123, in wrapper
+    self._initialize_workers(self._worker_group)
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 123, in wrapper
+    self._initialize_workers(self._worker_group)
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 123, in wrapper
+    result = f(*args, **kwargs)
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 705, in _initialize_workers
+    result = f(*args, **kwargs)
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 705, in _initialize_workers
+    result = f(*args, **kwargs)
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 705, in _initialize_workers
+    self._rendezvous(worker_group)
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 123, in wrapper
+    self._rendezvous(worker_group)
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 123, in wrapper
+    self._rendezvous(worker_group)
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 123, in wrapper
+    result = f(*args, **kwargs)
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 548, in _rendezvous
+    result = f(*args, **kwargs)
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 548, in _rendezvous
+    result = f(*args, **kwargs)
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 548, in _rendezvous
+    store, group_rank, group_world_size = spec.rdzv_handler.next_rendezvous()
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/static_tcp_rendezvous.py", line 55, in next_rendezvous
+    store, group_rank, group_world_size = spec.rdzv_handler.next_rendezvous()
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/static_tcp_rendezvous.py", line 55, in next_rendezvous
+    store, group_rank, group_world_size = spec.rdzv_handler.next_rendezvous()
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/static_tcp_rendezvous.py", line 55, in next_rendezvous
+    self._store = TCPStore(  # type: ignore[call-arg]
+torch.distributed.DistNetworkError: The server socket has failed to listen on any local network address. The server socket cannot be initialized on [::]:29500 (errno: 97 - Address family not supported by protocol). The server socket has failed to bind to 0.0.0.0:29500 (errno: 98 - Address already in use).
+    self._store = TCPStore(  # type: ignore[call-arg]
+torch.distributed.DistNetworkError: The server socket has failed to listen on any local network address. The server socket cannot be initialized on [::]:29500 (errno: 97 - Address family not supported by protocol). The server socket has failed to bind to 0.0.0.0:29500 (errno: 98 - Address already in use).
+    self._store = TCPStore(  # type: ignore[call-arg]
+torch.distributed.DistNetworkError: The server socket has failed to listen on any local network address. The server socket cannot be initialized on [::]:29500 (errno: 97 - Address family not supported by protocol). The server socket has failed to bind to 0.0.0.0:29500 (errno: 98 - Address already in use).
+srun: error: holygpu8a17502: tasks 0-2: Exited with exit code 1
+[W socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [localhost]:29500 (errno: 97 - Address family not supported by protocol).
+[W socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [localhost]:29500 (errno: 97 - Address family not supported by protocol).
+[W socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [localhost]:29500 (errno: 97 - Address family not supported by protocol).
+[W socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [localhost]:29500 (errno: 97 - Address family not supported by protocol).
+wandb: Currently logged in as: hamshoe. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.19.1 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.16.3
+wandb: Run data is saved locally in /n/netscratch/sham_lab/Everyone/bham/mid_olmo/ckpts/repeated/wandb/wandb/run-20241216_142329-fz9fnz3u
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run warmup200-webv1-1BParam-100synth-21B_pt
+wandb: ⭐️ View project at https://wandb.ai/hamshoe/mid-olmo
+wandb: 🚀 View run at https://wandb.ai/hamshoe/mid-olmo/runs/fz9fnz3u
+wandb: WARNING No program path found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job
+wandb: - 0.011 MB of 0.011 MB uploadedwandb: \ 0.011 MB of 0.011 MB uploadedwandb: | 0.034 MB of 0.034 MB uploadedwandb:                                                                                
+wandb: 🚀 View run warmup200-webv1-1BParam-100synth-21B_pt at: https://wandb.ai/hamshoe/mid-olmo/runs/fz9fnz3u
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+Traceback (most recent call last):
+  File "/n/home07/bham/mid-OLMo/olmo/util.py", line 807, in fill_queue
+    for value in g:
+  File "/n/home07/bham/mid-OLMo/olmo/data/iterable_dataset.py", line 174, in <genexpr>
+    generator = (self._get_dataset_item(int(idx)) for idx in indices[i::num_threads])
+  File "/n/home07/bham/mid-OLMo/olmo/data/iterable_dataset.py", line 184, in _get_dataset_item
+    item = self.dataset[idx]
+  File "/n/home07/bham/mid-OLMo/olmo/data/memmap_dataset.py", line 193, in __getitem__
+    raise IndexError(f"{index} is out of bounds for dataset of size {len(self)}")
+IndexError: 1302825 is out of bounds for dataset of size 1199820
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/n/sw/Mambaforge-22.11.1-4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/n/sw/Mambaforge-22.11.1-4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/n/home07/bham/mid-OLMo/scripts/train.py", line 403, in <module>
+    main(cfg)
+  File "/n/home07/bham/mid-OLMo/scripts/train.py", line 366, in main
+    trainer.fit()
+  File "/n/home07/bham/mid-OLMo/olmo/train.py", line 1186, in fit
+    for batch in self.train_loader:
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 32, in fetch
+    data.append(next(self.dataset_iter))
+  File "/n/home07/bham/mid-OLMo/olmo/data/iterable_dataset.py", line 179, in <genexpr>
+    return (x for x in roundrobin(*thread_generators))
+  File "/n/home07/bham/mid-OLMo/olmo/util.py", line 836, in roundrobin
+    yield next()
+  File "/n/home07/bham/mid-OLMo/olmo/util.py", line 820, in threaded_generator
+    raise OLMoThreadError(f"generator thread {thread_name} failed") from x
+olmo.exceptions.OLMoThreadError: generator thread data thread 0 failed
+W1216 14:28:49.812000 22749890807616 torch/distributed/elastic/multiprocessing/api.py:851] Sending process 132919 closing signal SIGTERM
+/n/sw/Mambaforge-22.11.1-4/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+E1216 14:28:50.377000 22749890807616 torch/distributed/elastic/multiprocessing/api.py:826] failed (exitcode: 1) local_rank: 1 (pid: 132920) of binary: /n/sw/Mambaforge-22.11.1-4/bin/python3.10
+Traceback (most recent call last):
+  File "/n/home07/bham/.local/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 347, in wrapper
+    return f(*args, **kwargs)
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/run.py", line 879, in main
+    run(args)
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/run.py", line 870, in run
+    elastic_launch(
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 263, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+scripts.train FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2024-12-16_14:28:49
+  host      : holygpu8a17502.rc.fas.harvard.edu
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 132921)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2024-12-16_14:28:49
+  host      : holygpu8a17502.rc.fas.harvard.edu
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 132922)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-12-16_14:28:49
+  host      : holygpu8a17502.rc.fas.harvard.edu
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 132920)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: holygpu8a17502: task 3: Exited with exit code 1

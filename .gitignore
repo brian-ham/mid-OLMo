@@ -56,3 +56,6 @@ site/
 /wandb/
 /scratch/
 core
+logs/
+scripts/logs/
+

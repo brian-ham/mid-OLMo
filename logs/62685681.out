@@ -1,0 +1,170 @@
+2024-12-16 14:22:56.065	holygpu8a17404.rc.fas.harvard.edu:0	train:393	INFO	CLI environment prepared
+2024-12-16 14:22:56.147	holygpu8a17404.rc.fas.harvard.edu:0	train:91	INFO	Configuration:
+2024-12-16 14:22:56.147	holygpu8a17404.rc.fas.harvard.edu:0	train:92	INFO	TrainConfig(run_name='OLMo-1B', seed=6198, epoch=None, dry_run=False, model=ModelConfig(d_model=2048, n_heads=16, n_kv_heads=None, clip_qkv=None, n_layers=16, mlp_ratio=8, mlp_hidden_size=None, activation_type='swiglu', block_type='sequential', block_group_size=1, alibi=False, alibi_bias_max=8.0, rope=True, rope_full_precision=True, rope_theta=10000, flash_attention=False, attention_dropout=0.0, multi_query_attention=False, attention_layer_norm=False, residual_dropout=0.0, embedding_dropout=0.0, embedding_layer_norm=False, layer_norm_type='default', layer_norm_with_affine=False, layer_norm_eps=1e-05, attention_layer_norm_with_affine=False, max_sequence_length=2048, include_bias=False, bias_for_layer_norm=False, scale_logits=False, vocab_size=50280, embedding_size=50304, weight_tying=True, eos_token_id=50279, pad_token_id=1, init_device='meta', init_fn='mitchell', init_std=0.02, init_cutoff_factor=None, precision='amp_bf16', scale_emb_init=False, emb_init_std=None, norm_after=False), optimizer=OptimizerConfig(name='adamw', learning_rate=0.0004, weight_decay=0.1, betas=(0.9, 0.95), eps=1e-05, no_decay_norm_and_bias=None, selective_updates=False, decay_norm_and_bias=False, decay_embeddings=False, metrics_log_interval=10, record_update_metrics=False), scheduler=SchedulerConfig(name='cosine_with_warmup', units='steps', t_warmup=60, t_max=None, alpha_f=0.1, grad_clip_warmup_steps=None, grad_clip_warmup_factor=None, warmup_min_lr=None), data=DataConfig(paths=['/n/netscratch/sham_lab/Everyone/bham/mid_olmo/web_samples_v1/memmap/prompts/data-combined.npy'], memmap_dtype='uint16', datasets=None, label_mask_paths=None, pad_direction='right', generate_attention_mask=False, generate_doc_lengths=False, num_workers=0, drop_last=True, pin_memory=True, prefetch_factor=16, persistent_workers=True, timeout=0, seed=None, instance_filter=None), restore_dataloader=False, fast_forward_batches=None, evaluators=[EvaluatorConfig(label='v3-small-ppl-validation', type='lm', data=DataConfig(paths=None, memmap_dtype='uint16', datasets={'v3-small-c4_en-validation': ['/n/netscratch/sham_lab/Everyone/bham/mid_olmo/eval_data/v3-small-c4_en-validation.npy'], 'v3-small-dolma_books-validation': ['/n/netscratch/sham_lab/Everyone/bham/mid_olmo/eval_data/v3-small-dolma_books-validation.npy'], 'v3-small-dolma_common-crawl-validation': ['/n/netscratch/sham_lab/Everyone/bham/mid_olmo/eval_data/v3-small-dolma_common-crawl-validation.npy'], 'v3-small-dolma_reddit-validation': ['/n/netscratch/sham_lab/Everyone/bham/mid_olmo/eval_data/v3-small-dolma_reddit-validation.npy'], 'v3-small-dolma_wiki-validation': ['/n/netscratch/sham_lab/Everyone/bham/mid_olmo/eval_data/v3-small-dolma_wiki-validation.npy'], 'v3-small-wikitext_103-validation': ['/n/netscratch/sham_lab/Everyone/bham/mid_olmo/eval_data/v3-small-wikitext_103-validation.npy']}, label_mask_paths=None, pad_direction='right', generate_attention_mask=False, generate_doc_lengths=False, num_workers=0, drop_last=True, pin_memory=False, prefetch_factor=None, persistent_workers=False, timeout=0, seed=None, instance_filter=None), device_eval_batch_size=None, subset_num_batches=None), EvaluatorConfig(label='cosmopedia_evals', type='lm', data=DataConfig(paths=None, memmap_dtype='uint16', datasets={'web_samples_v1-texts': ['/n/netscratch/sham_lab/Everyone/bham/mid_olmo/web_samples_v1/memmap/texts/data-eval.npy'], 'web_samples_v1-prompts': ['/n/netscratch/sham_lab/Everyone/bham/mid_olmo/web_samples_v1/memmap/prompts/data-eval.npy'], 'web_samples_v2-texts': ['/n/netscratch/sham_lab/Everyone/bham/mid_olmo/web_samples_v2/memmap/texts/data-eval.npy'], 'web_samples_v2-prompts': ['/n/netscratch/sham_lab/Everyone/bham/mid_olmo/web_samples_v2/memmap/prompts/data-eval.npy']}, label_mask_paths=None, pad_direction='right', generate_attention_mask=False, generate_doc_lengths=False, num_workers=0, drop_last=True, pin_memory=False, prefetch_factor=None, persistent_workers=False, timeout=0, seed=None, instance_filter=None), device_eval_batch_size=None, subset_num_batches=None), EvaluatorConfig(label='arc_easy', type='downstream', data=DataConfig(paths=None, memmap_dtype='uint16', datasets=None, label_mask_paths=None, pad_direction='right', generate_attention_mask=False, generate_doc_lengths=False, num_workers=0, drop_last=False, pin_memory=False, prefetch_factor=None, persistent_workers=False, timeout=0, seed=None, instance_filter=None), device_eval_batch_size=None, subset_num_batches=None), EvaluatorConfig(label='hellaswag', type='downstream', data=DataConfig(paths=None, memmap_dtype='uint16', datasets=None, label_mask_paths=None, pad_direction='right', generate_attention_mask=False, generate_doc_lengths=False, num_workers=0, drop_last=False, pin_memory=False, prefetch_factor=None, persistent_workers=False, timeout=0, seed=None, instance_filter=None), device_eval_batch_size=None, subset_num_batches=None), EvaluatorConfig(label='piqa', type='downstream', data=DataConfig(paths=None, memmap_dtype='uint16', datasets=None, label_mask_paths=None, pad_direction='right', generate_attention_mask=False, generate_doc_lengths=False, num_workers=0, drop_last=False, pin_memory=False, prefetch_factor=None, persistent_workers=False, timeout=0, seed=None, instance_filter=None), device_eval_batch_size=None, subset_num_batches=None)], eval_interval=10, tokenizer=TokenizerConfig(identifier='tokenizers/allenai_eleuther-ai-gpt-neox-20b-pii-special.json', truncate_direction='right'), save_folder='/n/netscratch/sham_lab/Everyone/bham/mid_olmo/ckpts/repeated', remote_save_folder=None, canceled_check_interval=50, save_interval=1000, save_interval_unsharded=10000, save_interval_ephemeral=None, save_num_checkpoints_to_keep=9, save_num_unsharded_checkpoints_to_keep=-1, save_overwrite=True, force_save_unsharded=False, no_pre_train_checkpoint=False, load_path='https://olmo-checkpoints.org/ai2-llm/olmo-small/w1r5xfzt/step5000-unsharded/', load_path_sharded_checkpointer=None, try_load_latest_save=False, reset_optimizer_state=False, reset_trainer_state=False, sharded_checkpointer='torch_legacy', new_style_checkpoints=None, max_duration=600, global_train_batch_size=2048, device_train_batch_size=512, device_train_microbatch_size=8, device_eval_batch_size=8, eval_subset_num_batches=-1, eval_on_load=True, device_train_grad_accum=64, max_grad_norm=1.0, max_grad_norm_ratio=None, precision='amp_bf16', wandb=WandbConfig(project='mid-olmo', entity='hamshoe', group=None, name='warmup200-webv1-1BParam-100prompts', tags=['watching'], log_artifacts=False, rank_zero_only=True, log_interval=1), speed_monitor=SpeedMonitorConfig(window_size=20, gpu_flops_available=None), console_log_interval=1, gen1_gc_interval=1, compile=None, distributed_strategy='fsdp', fsdp=FSDPConfig(use_orig_params=True, sharding_strategy=<ShardingStrategy.FULL_SHARD: 1>, wrapping_strategy=None, precision='mixed', hybrid_sharding_num_model_replicas=None), ddp=None, softmax_auxiliary_loss=False, auxiliary_loss_multiplier=0.0001, time_limit=None, extra_steps_after_cancel=10, early_stopping_factor=None, save_data_indices=True, python_profiling=False, torch_profiling=False, stop_at=None, stop_after=None, activation_checkpointing=None, fused_loss=None, hf_datasets_cache_dir=None, module_outputs_save_steps=None)
+2024-12-16 14:22:56.150	holygpu8a17404.rc.fas.harvard.edu:0	train:99	INFO	Saving config to /n/netscratch/sham_lab/Everyone/bham/mid_olmo/ckpts/repeated/config.yaml
+2024-12-16 14:23:20.565	holygpu8a17404.rc.fas.harvard.edu:0	olmo.data.iterable_dataset:78	INFO	Saving global data order indices...
+2024-12-16 14:23:20.601	holygpu8a17404.rc.fas.harvard.edu:0	olmo.data.iterable_dataset:87	INFO	Global data order indices saved to '/n/netscratch/sham_lab/Everyone/bham/mid_olmo/ckpts/repeated/train_data/global_indices.npy'
+2024-12-16 14:23:25.469	holygpu8a17404.rc.fas.harvard.edu:0	train:145	INFO	Building model...
+2024-12-16 14:23:25.555	holygpu8a17404.rc.fas.harvard.edu:0	train:147	INFO	Total number of parameters: 1,176,764,416
+2024-12-16 14:23:25.555	holygpu8a17404.rc.fas.harvard.edu:0	train:148	INFO	Number of non-embedding parameters: 1,073,741,824
+2024-12-16 14:23:25.559	holygpu8a17404.rc.fas.harvard.edu:0	train:149	INFO	Peak GPU Memory (MB) before fsdp: 3
+2024-12-16 14:23:25.559	holygpu8a17404.rc.fas.harvard.edu:0	train:178	INFO	Wrapping model with FSDP...
+2024-12-16 14:23:25.593	holygpu8a17404.rc.fas.harvard.edu:0	olmo.model:1168	INFO	Initializing model parameters...
+2024-12-16 14:23:25.684	holygpu8a17404.rc.fas.harvard.edu:0	train:234	INFO	Peak GPU Memory (MB) after fsdp: 10595
+2024-12-16 14:23:25.685	holygpu8a17404.rc.fas.harvard.edu:0	train:235	INFO	Model:
+2024-12-16 14:23:25.685	holygpu8a17404.rc.fas.harvard.edu:0	train:236	INFO	FullyShardedDataParallel(
+  (_fsdp_wrapped_module): OLMo(
+    (transformer): ModuleDict(
+      (wte): Embedding(50304, 2048)
+      (emb_drop): Dropout(p=0.0, inplace=False)
+      (ln_f): LayerNorm()
+      (blocks): ModuleList(
+        (0-15): 16 x OLMoSequentialBlock(
+          (dropout): Dropout(p=0.0, inplace=False)
+          (act): SwiGLU()
+          (attn_out): Linear(in_features=2048, out_features=2048, bias=False)
+          (ff_out): Linear(in_features=8192, out_features=2048, bias=False)
+          (rotary_emb): RotaryEmbedding()
+          (att_proj): Linear(in_features=2048, out_features=6144, bias=False)
+          (ff_proj): Linear(in_features=2048, out_features=16384, bias=False)
+          (attn_norm): LayerNorm()
+          (ff_norm): LayerNorm()
+        )
+      )
+    )
+  )
+)
+2024-12-16 14:23:25.686	holygpu8a17404.rc.fas.harvard.edu:0	olmo.optim:944	INFO	Constructing optimizer with 2 param groups
+2024-12-16 14:23:25.694	holygpu8a17404.rc.fas.harvard.edu:0	train:342	INFO	Loading checkpoint from https://olmo-checkpoints.org/ai2-llm/olmo-small/w1r5xfzt/step5000-unsharded/...
+2024-12-16 14:23:26.447	holygpu8a17404.rc.fas.harvard.edu:0	cached_path:359	INFO	cache of https://olmo-checkpoints.org/ai2-llm/olmo-small/w1r5xfzt/step5000-unsharded/model.pt is up-to-date
+2024-12-16 14:25:16.468	holygpu8a17404.rc.fas.harvard.edu:0	cached_path:359	INFO	cache of https://olmo-checkpoints.org/ai2-llm/olmo-small/w1r5xfzt/step5000-unsharded/optim.pt is up-to-date
+2024-12-16 14:28:52.594	holygpu8a17404.rc.fas.harvard.edu:0	olmo.checkpoint:753	INFO	Loading optimizer state turn 0 ...
+2024-12-16 14:28:52.595	holygpu8a17404.rc.fas.harvard.edu:0	olmo.checkpoint:219	INFO	Flattening sharded optimizer state...
+2024-12-16 14:28:53.137	holygpu8a17404.rc.fas.harvard.edu:0	olmo.checkpoint:233	INFO	Loading flattened optimizer state...
+2024-12-16 14:28:53.754	holygpu8a17404.rc.fas.harvard.edu:0	olmo.checkpoint:753	INFO	Loading optimizer state turn 1 ...
+2024-12-16 14:28:54.891	holygpu8a17404.rc.fas.harvard.edu:0	olmo.checkpoint:753	INFO	Loading optimizer state turn 2 ...
+2024-12-16 14:28:56.040	holygpu8a17404.rc.fas.harvard.edu:0	olmo.checkpoint:753	INFO	Loading optimizer state turn 3 ...
+2024-12-16 14:28:57.873	holygpu8a17404.rc.fas.harvard.edu:0	cached_path:359	INFO	cache of https://olmo-checkpoints.org/ai2-llm/olmo-small/w1r5xfzt/step5000-unsharded/train.pt is up-to-date
+2024-12-16 14:28:57.901	holygpu8a17404.rc.fas.harvard.edu:2	olmo.train:423	WARNING	Trainer will not restore RNG states since the RNG states in the checkpoint are missing or invalid. This typically happens when restoring from an unsharded checkpoint or a checkpoint that was saved with a different world size. If that's the case you can safely ignore this warning.
+2024-12-16 14:28:57.902	holygpu8a17404.rc.fas.harvard.edu:0	olmo.train:407	INFO	Resetting learning rate...
+2024-12-16 14:28:57.902	holygpu8a17404.rc.fas.harvard.edu:0	olmo.train:423	WARNING	Trainer will not restore RNG states since the RNG states in the checkpoint are missing or invalid. This typically happens when restoring from an unsharded checkpoint or a checkpoint that was saved with a different world size. If that's the case you can safely ignore this warning.
+2024-12-16 14:28:57.905	holygpu8a17404.rc.fas.harvard.edu:1	olmo.train:423	WARNING	Trainer will not restore RNG states since the RNG states in the checkpoint are missing or invalid. This typically happens when restoring from an unsharded checkpoint or a checkpoint that was saved with a different world size. If that's the case you can safely ignore this warning.
+2024-12-16 14:28:57.905	holygpu8a17404.rc.fas.harvard.edu:3	olmo.train:423	WARNING	Trainer will not restore RNG states since the RNG states in the checkpoint are missing or invalid. This typically happens when restoring from an unsharded checkpoint or a checkpoint that was saved with a different world size. If that's the case you can safely ignore this warning.
+2024-12-16 14:28:58.158	holygpu8a17404.rc.fas.harvard.edu:0	train:349	INFO	Checkpoint successfully loaded
+2024-12-16 14:28:58.158	holygpu8a17404.rc.fas.harvard.edu:0	train:365	INFO	Starting training...
+2024-12-16 14:28:58.174	holygpu8a17404.rc.fas.harvard.edu:0	olmo.train:967	INFO	Pre-train system metrics
+    System/Peak GPU Memory (MB)=10,595
+2024-12-16 14:28:58.447	holygpu8a17404.rc.fas.harvard.edu:1	olmo.util:168	CRITICAL	Uncaught OLMoThreadError: generator thread data thread 2 failed
+Traceback (most recent call last):
+  File "/n/home07/bham/mid-OLMo/olmo/util.py", line 807, in fill_queue
+    for value in g:
+  File "/n/home07/bham/mid-OLMo/olmo/data/iterable_dataset.py", line 174, in <genexpr>
+    generator = (self._get_dataset_item(int(idx)) for idx in indices[i::num_threads])
+  File "/n/home07/bham/mid-OLMo/olmo/data/iterable_dataset.py", line 184, in _get_dataset_item
+    item = self.dataset[idx]
+  File "/n/home07/bham/mid-OLMo/olmo/data/memmap_dataset.py", line 193, in __getitem__
+    raise IndexError(f"{index} is out of bounds for dataset of size {len(self)}")
+IndexError: 2342676 is out of bounds for dataset of size 1199820
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/n/sw/Mambaforge-22.11.1-4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/n/sw/Mambaforge-22.11.1-4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/n/home07/bham/mid-OLMo/scripts/train.py", line 403, in <module>
+    main(cfg)
+  File "/n/home07/bham/mid-OLMo/scripts/train.py", line 366, in main
+    trainer.fit()
+  File "/n/home07/bham/mid-OLMo/olmo/train.py", line 1186, in fit
+    for batch in self.train_loader:
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 32, in fetch
+    data.append(next(self.dataset_iter))
+  File "/n/home07/bham/mid-OLMo/olmo/data/iterable_dataset.py", line 179, in <genexpr>
+    return (x for x in roundrobin(*thread_generators))
+  File "/n/home07/bham/mid-OLMo/olmo/util.py", line 836, in roundrobin
+    yield next()
+  File "/n/home07/bham/mid-OLMo/olmo/util.py", line 820, in threaded_generator
+    raise OLMoThreadError(f"generator thread {thread_name} failed") from x
+olmo.exceptions.OLMoThreadError: generator thread data thread 2 failed
+2024-12-16 14:28:58.445	holygpu8a17404.rc.fas.harvard.edu:3	olmo.util:168	CRITICAL	Uncaught OLMoThreadError: generator thread data thread 0 failed
+Traceback (most recent call last):
+  File "/n/home07/bham/mid-OLMo/olmo/util.py", line 807, in fill_queue
+    for value in g:
+  File "/n/home07/bham/mid-OLMo/olmo/data/iterable_dataset.py", line 174, in <genexpr>
+    generator = (self._get_dataset_item(int(idx)) for idx in indices[i::num_threads])
+  File "/n/home07/bham/mid-OLMo/olmo/data/iterable_dataset.py", line 184, in _get_dataset_item
+    item = self.dataset[idx]
+  File "/n/home07/bham/mid-OLMo/olmo/data/memmap_dataset.py", line 193, in __getitem__
+    raise IndexError(f"{index} is out of bounds for dataset of size {len(self)}")
+IndexError: 1388321 is out of bounds for dataset of size 1199820
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/n/sw/Mambaforge-22.11.1-4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/n/sw/Mambaforge-22.11.1-4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/n/home07/bham/mid-OLMo/scripts/train.py", line 403, in <module>
+    main(cfg)
+  File "/n/home07/bham/mid-OLMo/scripts/train.py", line 366, in main
+    trainer.fit()
+  File "/n/home07/bham/mid-OLMo/olmo/train.py", line 1186, in fit
+    for batch in self.train_loader:
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 32, in fetch
+    data.append(next(self.dataset_iter))
+  File "/n/home07/bham/mid-OLMo/olmo/data/iterable_dataset.py", line 179, in <genexpr>
+    return (x for x in roundrobin(*thread_generators))
+  File "/n/home07/bham/mid-OLMo/olmo/util.py", line 836, in roundrobin
+    yield next()
+  File "/n/home07/bham/mid-OLMo/olmo/util.py", line 820, in threaded_generator
+    raise OLMoThreadError(f"generator thread {thread_name} failed") from x
+olmo.exceptions.OLMoThreadError: generator thread data thread 0 failed
+2024-12-16 14:28:58.441	holygpu8a17404.rc.fas.harvard.edu:2	olmo.util:168	CRITICAL	Uncaught OLMoThreadError: generator thread data thread 0 failed
+Traceback (most recent call last):
+  File "/n/home07/bham/mid-OLMo/olmo/util.py", line 807, in fill_queue
+    for value in g:
+  File "/n/home07/bham/mid-OLMo/olmo/data/iterable_dataset.py", line 174, in <genexpr>
+    generator = (self._get_dataset_item(int(idx)) for idx in indices[i::num_threads])
+  File "/n/home07/bham/mid-OLMo/olmo/data/iterable_dataset.py", line 184, in _get_dataset_item
+    item = self.dataset[idx]
+  File "/n/home07/bham/mid-OLMo/olmo/data/memmap_dataset.py", line 193, in __getitem__
+    raise IndexError(f"{index} is out of bounds for dataset of size {len(self)}")
+IndexError: 2218791 is out of bounds for dataset of size 1199820
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/n/sw/Mambaforge-22.11.1-4/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/n/sw/Mambaforge-22.11.1-4/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/n/home07/bham/mid-OLMo/scripts/train.py", line 403, in <module>
+    main(cfg)
+  File "/n/home07/bham/mid-OLMo/scripts/train.py", line 366, in main
+    trainer.fit()
+  File "/n/home07/bham/mid-OLMo/olmo/train.py", line 1186, in fit
+    for batch in self.train_loader:
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/n/home07/bham/.local/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 32, in fetch
+    data.append(next(self.dataset_iter))
+  File "/n/home07/bham/mid-OLMo/olmo/data/iterable_dataset.py", line 179, in <genexpr>
+    return (x for x in roundrobin(*thread_generators))
+  File "/n/home07/bham/mid-OLMo/olmo/util.py", line 836, in roundrobin
+    yield next()
+  File "/n/home07/bham/mid-OLMo/olmo/util.py", line 820, in threaded_generator
+    raise OLMoThreadError(f"generator thread {thread_name} failed") from x
+olmo.exceptions.OLMoThreadError: generator thread data thread 0 failed
